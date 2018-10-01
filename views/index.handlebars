@@ -1,0 +1,39 @@
+
+<header class="header">
+  <nav class="button-group">
+    <button class="button-dark" id="scrape" data-toggle="modal" data-target="#alertModal">Scrape New Articles</button>
+    <a href="/articles/viewSaved"><button class="button-dark" id="viewSaved">View Saved Articles</button></a>
+  </nav>
+</header>
+<div class="filler"></div>
+
+{{#each articles}}
+  {{#unless saved}}
+    <figure class="storyPanel clearfix">
+      {{#if Url}}
+        <a href="{{Url}}" class="storyLink" target="_blank">
+          <h2 class="storyHeadline">{{headline}}</h2>
+        </a>
+      {{else}}
+        <h3 class="storyHeadline">{{headline}}</h3>
+      {{/if}}
+      <h6 class="storySummary">{{summary}}</h6>
+      <button class="storyButton" id="saveArticle" data-id="{{_id}}">Save Article</button>
+    </figure>
+  {{/unless}}
+{{/each}}
+
+
+{{!-- error modal --}}
+<div id="error" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h2>There was an error processing your request.  Please try again later.</h2>
+      </div>
+    </div>
+  </div>
+</div>
