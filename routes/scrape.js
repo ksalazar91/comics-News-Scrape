@@ -15,7 +15,7 @@ app.get("/newArticles", function(req, res){
   };
 
   db.Article.find({}).then(function(savedArticles){
-    var savedHeadline = sav.map(function(article){
+    var savedHeadline = savedArticles.map(function(article){
       article.headline;
     }); 
       rp(options)

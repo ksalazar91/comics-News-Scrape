@@ -22,7 +22,7 @@ app.use(express.static("public"));
 
 var config = require('./config/database');
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://dbscraper:database91@ds163781.mlab.com:63781/heroku_wkvbvzfg")
+mongoose.connect(config.db)
   .then( result => {
     console.log(`Connected to database`);
   })
