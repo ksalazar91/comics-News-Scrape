@@ -22,8 +22,7 @@ app.use(express.static("public"));
 
 var config = require('./config/database');
 mongoose.Promise = Promise;
-mongoose
-  .connect(config.db)
+mongoose.connect(config.db)
   .then( result => {
     console.log(`Connected to database`);
   })
