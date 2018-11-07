@@ -2,7 +2,7 @@
 
 It uses Mongoose and Cheerio to scrape news from another site.
 
-Web app that lets users view latest new comic, provides a priview, a link to the full article , and if the user wants to save an article she/he can be clicking the save button. 
+Web app that lets users view latest new comic, provides a preview, a link to the full article , and if the user wants to save an article she/he can do it by clicking the save button.
 
 ![Initial](https://github.com/ksalazar91/comics-News-Scrape/blob/master/1.png)
 
